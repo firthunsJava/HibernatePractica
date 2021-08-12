@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/hibernatepractica</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+
+<!--        MAPEO CON HIBERNATE (xml) -->
+        <mapping resource="modelos/Agente.hbm.xml"/>
+        <mapping resource="modelos/cuadros.hbm.xml"/>
+        <mapping resource="modelos/Estudio.hbm.xml"/>
+        <mapping resource="modelos/pintor.hbm.xml"/>
+
+
+<!--        MAPEO CON JPA( notación @ en la clase )<-->
+        <mapping class="modelos.Agente"/>
+        <mapping class="modelos.Cuadros"/>
+        <mapping class="modelos.Estudio"/>
+        <mapping class="modelos.Pintor"/>
+
+
+
+
+    </session-factory>
+</hibernate-configuration>
